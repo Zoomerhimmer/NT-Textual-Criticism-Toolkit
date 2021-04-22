@@ -100,9 +100,7 @@ def main():
     print(pruned_pairs)
     pairs_total = 0
     for pair in pruned_pairs:
-        #pair_pattern = re.compile(fr'([[⁰¹²³⁴⁵⁶⁷⁸⁹ʼ]*\b{pair[0]}\S?[]]\s+[[⁰¹²³⁴⁵⁶⁷⁸⁹ʼ]*{pair[1]}\b\S?)')
-        pair_pattern = re.compile(fr'(\b{pair[0]}\b\S?[]]?\s+[⁰¹²³⁴⁵⁶⁷⁸⁹ʼ]*[[]?\b{pair[1]}\b\S?)')
-        #pair_pattern = re.compile(fr'(\b{pair[0]}\S?[]⁰¹²³⁴⁵⁶⁷⁸⁹ʼ]*\s+[[]?{pair[1]}\b\S?)')
+        pair_pattern = re.compile(fr'(\b{pair[0]}\b\S?[]]?\s+[[⁰¹²³⁴⁵⁶⁷⁸⁹ʼ]*\b{pair[1]}\b\S?)')
         if show_loc:
             pairs_total += len(pair_pattern.findall(data)) # Get count from data to avoid (( bug
         else:
