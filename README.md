@@ -1,2 +1,2 @@
-# NT-Textual-Criticism-Toolkit
-Solving textual cristicism tasks with computational assisstance. (In development)
+# NT-Textual-Toolkit
+Providing computerized assistance to textual criticism and literary analysis. (In development)
